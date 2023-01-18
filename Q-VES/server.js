@@ -5,7 +5,9 @@ require('dotenv').config();
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
-require('./server/config/mongoose.config') 
+// require('./server/config/mongoose.config');
+
+require('./server/config/connectMongoAtlas')();
 app.use(cors({credentials:true,origin:'http://localhost:3000'}));
 
 app.use(express.json());
